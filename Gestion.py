@@ -1,7 +1,7 @@
 from tkinter import*
 
 def validation(entr,plt,dessrt,boissn,plc) :#entr : entrées , plt : plat , dessrt  : desserts, boissn : boisson, plc  : place
-                    #fonction Tkinter
+                    #fonction Tkinter#debut fenetre 2
         #fonction ajouter( incrémentation de 1)
         def ajouter(iv):
             valeur=iv.get()+1
@@ -211,7 +211,8 @@ def validation(entr,plt,dessrt,boissn,plc) :#entr : entrées , plt : plat , dess
         #bouton Terminer@objet
         Terminer = Button(stocks,text="Afficher",command=lambda:affichage_Etu(iv_entree,iv_plat,iv_dessert,iv_boisson,numI,liste_affichage) )
         Afficher = Button(stocks,text="Supprimer",command=lambda:Supprimer())
-        Quitter_fin = Button(stocks,text="finir",command=lambda:stocks.quit(),width=15,height=2,bd=2)
+        Quitter_fin = Button(stocks,text="abandonner",command=lambda:stocks.quit(),width=15,height=2,bd=2)
+        valider_liste = Button(stocks,text="valider",command=lambda:valid_list(),width=15,height=2)
 
         #positionnement des différentes options dans l'interface visuelle 
         #dans la fenetre principale(1)
@@ -249,6 +250,7 @@ def validation(entr,plt,dessrt,boissn,plc) :#entr : entrées , plt : plat , dess
         #bouton affichages des informations personnelles 
         Afficher.grid(row=13,column=4,pady=10)
         Quitter_fin.grid(row=14,column=0)
+        valider_liste.grid(row=15,column=4,pady=10)
 
 
 
@@ -294,9 +296,9 @@ def validation(entr,plt,dessrt,boissn,plc) :#entr : entrées , plt : plat , dess
         #fin(2)
         #modification directe sur la fenetre de l'application
         stocks.title("Enregistrement")
-        stocks.wm_maxsize(width=810,height=500)
-        stocks.wm_minsize(width=810,height=500)
-
+        stocks.wm_maxsize(width=810,height=510)
+        stocks.wm_minsize(width=810,height=520)
+#fin fenetre 2 
    
 
   
